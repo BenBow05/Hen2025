@@ -1,6 +1,6 @@
 import './App.css';
 import React, {useState} from 'react';
-import AnalyzeCrime from './Components/Components/CrimeSeverityRating';
+import AnalyzeCrime from './Components/CrimeSeverityRating';
 import Dashboard from './Components/Dashboard';
 import MapView from './Components/MapView';
 import Navbar from './Components/Navbar';
