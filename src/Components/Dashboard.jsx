@@ -11,11 +11,36 @@ function Dashboard() {
             <p>Below you will see a list of local reports</p>
         </div>
         <div>
-            <ul>
-                {reports.map((report) => (
-                  <li>{report.crime}</li>
-                ))}
-            </ul>
+          <table>
+            <tr>
+              <th>
+                crime
+              </th>
+              <th>
+                safety
+              </th>
+              <th>
+                location
+              </th>
+              <th>
+                severity
+              </th>
+            </tr>
+            {reports.map((report) => (
+              <tr>
+                <td>
+                  {report.crime}
+                </td>
+                <td>
+                  {report.safety}
+                </td>
+                <td>
+                  {report.location}
+                </td>
+                <td>{report.severity}</td>
+              </tr>
+            ))}
+          </table>
         </div>
     </>
     
