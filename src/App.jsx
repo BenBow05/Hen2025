@@ -1,5 +1,5 @@
 import './App.css'
-import AnalyzeCrime from './CrimeSeverityRating'
+import AnalyzeCrime from './Components/CrimeSeverityRating'
 
 function App() {
 
