@@ -6,7 +6,6 @@ import Context from './Context';
 function Dashboard() {  
   const {showMap, setShowMap} = useContext(Context);
   const switchView = () => {
-    // navigate("/map")
     setShowMap(!showMap)
   }
 
