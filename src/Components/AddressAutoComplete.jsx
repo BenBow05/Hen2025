@@ -94,7 +94,7 @@ const AddressAutocomplete = ({ onSelect }) => {
         value={address}
         onChange={(e) => setAddress(e.target.value)}
         placeholder="Enter your address"
-        style={{ flex: 1, padding: "10px", fontSize: "16px" }}
+        className="reportInput"
       />
       <button onClick={() => setShowMap(true)} style={{ padding: "10px", cursor: "pointer" }}>
         📍 Pick on Map

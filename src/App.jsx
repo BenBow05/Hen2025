@@ -21,7 +21,7 @@ function App() {
     document.body.appendChild(script);
   }, []);
   return (
-    <div>
+    <div className="appDiv">
       <Context.Provider value={{ reports, setReports, showMap, setShowMap }}>
         <Navbar />
         <div>
