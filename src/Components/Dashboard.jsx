@@ -15,6 +15,7 @@ function Dashboard() {
     <br></br>
 
         <div>
+          <h1>Welcome to CrimeScope!</h1>
         </div>
         <div>
           <button onClick={switchView}>{showMap ? "List View" : "Map View"}</button>
