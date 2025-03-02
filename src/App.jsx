@@ -10,16 +10,16 @@ import Context from './Components/Context';
 function App() {
   const [reports, setReports] = useState([
       {id: 0, severity: 5, crime: "I saw someone", location: "AMERICA", safety: "Close eyes"},
-    ]);
-
+  ]);
+  const [showMap, setShowMap] = useState(false);
   return (
     <>
-    <Context.Provider value={{ reports, setReports }}>
+    <Context.Provider value={{ reports, setReports, showMap, setShowMap }}>
       <Navbar/>
       <Routes>
         <Route path='/' element={<Dashboard/>}/>
         <Route path='/Report' element={<AnalyzeCrime/>}/>
-        <Route path="/map" element={<MapView/>}/>
+        {/* <Route path="/map" element={<MapView/>}/> */}
       </Routes>
     </Context.Provider>
     </>
