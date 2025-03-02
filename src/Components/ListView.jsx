@@ -1,53 +1,56 @@
 import React, { useContext, useEffect } from 'react';
 import Context from './Context';
-import * as crimeService from "../Services/CrimeService"
+import * as crimeService from "../Services/CrimeService";
+import '../styles/table.css';
 
 function ListView() {
-    const {reports, setReports} = useContext(Context);
+  const { reports, setReports } = useContext(Context);
 
-    useEffect(() => {
+  useEffect(() => {
     crimeService.getAllCrimes().then(response => {
       setReports(response);
-    })}, [])
+    })
+  }, [])
 
   return (
     <>
-        <table>
+      <h1>Report List</h1>
+      <table>
         <thead>
-              <tr className='row'>
-                <th>
-                  description
-                </th>
-                <th>
-                  safetyMeasures
-                </th>
-                <th>
-                  location
-                </th>
-                <th>
-                  severity
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {reports.map((report) => (
-              <tr>
-                <td>
-                  {report.description}
-                </td>
-                <td>
-                  {report.safetyMeasures}
-                </td>
-                <td>
-                  {report.location}
-                </td>
-                <td>{report.severity}</td>
-              </tr>
-            ))}
-            </tbody>
-        </table>
+          <tr>
+            <th>
+              Description
+            </th>
+            <th>
+              Safety Measures
+            </th>
+            <th>
+              Location
+            </th>
+            <th>
+              Severity
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {reports.map((report) => (
+            <tr>
+              <td>
+                {report.description}
+              </td>
+              <td>
+                {report.safetyMeasures}
+              </td>
+              <td>
+                {report.location}
+              </td>
+              <td>{report.severity}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </>
-    
+
   );
 }
 

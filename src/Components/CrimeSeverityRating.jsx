@@ -49,6 +49,7 @@ function AnalyzeCrime() {
 
   return (
     <div>
+      <h1>Report an Crime</h1>
       <input
         placeholder="Enter crime description"
         value={crimeDescription}
