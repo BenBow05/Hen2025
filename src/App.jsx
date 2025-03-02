@@ -9,15 +9,13 @@ import { Route, Routes } from 'react-router-dom';
 import Context from './Components/Context';
 
 function App() {
-  const [reports, setReports] = useState([
-    { id: 0, severity: 5, crime: "I saw someone", location: "AMERICA", safety: "Close eyes" },
-  ]);
+  const [reports, setReports] = useState([]);
   const [showMap, setShowMap] = useState(false);
   return (
     <div>
       <Context.Provider value={{ reports, setReports, showMap, setShowMap }}>
         <Navbar />
-        <div className='main'>
+        <div>
           <Routes>
             <Route path='/' element={<Dashboard />} />
             <Route path='/Report' element={<AnalyzeCrime />} />
