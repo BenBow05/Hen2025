@@ -14,6 +14,7 @@ function ListView() {
 
   return (
     <>
+      <h1>Report List</h1>
       <table>
         <thead>
           <tr>

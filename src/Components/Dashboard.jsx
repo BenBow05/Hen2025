@@ -5,19 +5,19 @@ import Context from './Context';
 
 function Dashboard() {  
   const {showMap, setShowMap} = useContext(Context);
-  const bigNav = () => {
+  const switchView = () => {
     // navigate("/map")
     setShowMap(!showMap)
   }
 
   return (
     <>
+    <br></br>
         <div>
-            <h1>Welcome to CrimeScope™</h1>
-            <p>Below you will see a list of local reports</p>
+            <h1>Welcome to CrimeScope</h1>
         </div>
         <div>
-          <button onClick={bigNav}>click</button>
+          <button onClick={switchView}>{showMap ? "List View" : "Map View"}</button>
         </div>
         {showMap ? <MapView/> : <ListView/>}
     </>
