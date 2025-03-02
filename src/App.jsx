@@ -2,13 +2,11 @@ import './App.css';
 import './styles/NavBar.css';
 import './index.css';
 import React, { useState, useEffect } from 'react';
-import AnalyzeCrime from './Components/CrimeSeverityRating';
 import ReportCrime from './Components/ReportCrime';
 import Dashboard from './Components/Dashboard';
 import Navbar from './Components/Navbar';
 import { Route, Routes } from 'react-router-dom';
 import Context from './Components/Context';
-import ReportCrime from './Components/ReportCrime';
 
 function App() {
   const [reports, setReports] = useState([]);
