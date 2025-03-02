@@ -1,5 +1,5 @@
 import './App.css';
-import './styles/Navbar.css';
+import './styles/NavBar.css';
 import './index.css';
 import React, { useState } from 'react';
 import AnalyzeCrime from './Components/CrimeSeverityRating';
