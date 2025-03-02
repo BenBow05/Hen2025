@@ -25,16 +25,16 @@ function Dashboard() {
             <thead>
               <tr className='row'>
                 <th>
-                  description
+                  Description
                 </th>
                 <th>
-                  safetyMeasures
+                  Safety Measures
                 </th>
                 <th>
-                  location
+                  Location
                 </th>
                 <th>
-                  severity
+                  Severity
                 </th>
               </tr>
             </thead>
