@@ -1,17 +1,16 @@
-#NavBar {
-    display: block;
-    width: 15%;
-    height: 100%;
-    float: left;
-    background-color: aquamarine;
+
+.appDiv{
+    
+}
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    color: white;
+    margin-top: 0px;
+
+    
 }
 
-#NavBar li {
-    list-style: none;
-}
-
-#NavBar button{
-    /* width: 100%; */
-    margin-top: 3%;
-    cursor: pointer;
-}

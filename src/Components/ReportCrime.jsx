@@ -83,11 +83,7 @@ function ReportCrime() {
 
       {ratingResult && (
         <div className="reportResult">
-          <h3>Report Summary</h3>
-          <p><strong>Severity:</strong> {ratingResult.severity}</p>
-          <p><strong>Description:</strong> {ratingResult.description}</p>
-          <p><strong>Location:</strong> {ratingResult.location}</p>
-          <p><strong>Safety Measures:</strong> {ratingResult.safetyMeasures}</p>
+          <p><strong>Thank you</strong> <br></br>{ratingResult.safetyMeasures}</p>
         </div>
       )}
     </div>

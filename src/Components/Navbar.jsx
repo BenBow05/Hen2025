@@ -1,17 +1,17 @@
 import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../styles/NavBar.css';
 
 function Navbar() {
   const navigate = useNavigate();
 
   return (
-    <div id="NavBar">
-      <li>
+    <div className='navbar'>
+  
         <button onClick={() => {navigate("/")}}> Home </button>
-      </li>
-      <li>
+     
         <button onClick={() => {navigate("/Report")}}> Report </button>
-      </li>
+      
     </div>
     
   );
