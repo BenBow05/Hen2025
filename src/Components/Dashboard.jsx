@@ -1,38 +1,49 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import Context from './Context';
+import * as crimeService from '../Services/CrimeService';
+import '../css/table.css'
 
 function Dashboard() {
 
   const {reports, setReports} = useContext(Context);
+
+  useEffect(() => {
+    crimeService.getAllCrimes().then(response => {
+      setReports(response);
+    })
+  }, [])
   return (
     <>
         <div>
             <h1>Welcome to CrimeScope™</h1>
-            <p>Below you will see a list of local reports</p>
+            <p>Below you will see a list of recent local reports</p>
         </div>
         <div>
-          <table>
-            <tr>
-              <th>
-                crime
-              </th>
-              <th>
-                safety
-              </th>
-              <th>
-                location
-              </th>
-              <th>
-                severity
-              </th>
-            </tr>
-            {reports.map((report) => (
+          <table className='table'>
+            <thead>
+              <tr className='row'>
+                <th>
+                  description
+                </th>
+                <th>
+                  safetyMeasures
+                </th>
+                <th>
+                  location
+                </th>
+                <th>
+                  severity
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {reports.map((report) => (
               <tr>
                 <td>
-                  {report.crime}
+                  {report.description}
                 </td>
                 <td>
-                  {report.safety}
+                  {report.safetyMeasures}
                 </td>
                 <td>
                   {report.location}
@@ -40,6 +51,8 @@ function Dashboard() {
                 <td>{report.severity}</td>
               </tr>
             ))}
+            </tbody>
+            
           </table>
         </div>
     </>
