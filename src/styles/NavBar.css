@@ -1,0 +1,16 @@
+#NavBar {
+    display: block;
+    width: 15%;
+    float: left;
+    background-color: aquamarine;
+}
+
+#NavBar li {
+    list-style: none;
+}
+
+#NavBar button{
+    /* width: 100%; */
+    margin-top: 3%;
+    cursor: pointer;
+}

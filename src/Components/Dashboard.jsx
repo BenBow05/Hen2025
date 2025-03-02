@@ -1,62 +1,25 @@
-import React, { useContext, useState, useEffect } from 'react';
-import Context from './Context';
-import * as crimeService from '../Services/CrimeService';
-import '../css/table.css'
+import React, { useContext, useState } from 'react';
 import MapView from './MapView';
+import ListView from './ListView';
+import Context from './Context';
 
-function Dashboard() {
-
-  const {reports, setReports} = useContext(Context);
+function Dashboard() {  
   const {showMap, setShowMap} = useContext(Context);
+  const bigNav = () => {
+    // navigate("/map")
+    setShowMap(!showMap)
+  }
 
-  useEffect(() => {
-    crimeService.getAllCrimes().then(response => {
-      setReports(response);
-    })
-  }, [])
   return (
     <>
         <div>
-            <h1>Welcome to CrimeScope</h1>
-            <p>Below you will see a list of recent local reports</p>
+            <h1>Welcome to CrimeScope™</h1>
+            <p>Below you will see a list of local reports</p>
         </div>
         <div>
-          <table className='table'>
-            <thead>
-              <tr className='row'>
-                <th>
-                  description
-                </th>
-                <th>
-                  safetyMeasures
-                </th>
-                <th>
-                  location
-                </th>
-                <th>
-                  severity
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {reports.map((report) => (
-              <tr>
-                <td>
-                  {report.description}
-                </td>
-                <td>
-                  {report.safetyMeasures}
-                </td>
-                <td>
-                  {report.location}
-                </td>
-                <td>{report.severity}</td>
-              </tr>
-            ))}
-            </tbody>
-          </table>
-          {showMap ? <MapView/> : ""}
+          <button onClick={bigNav}>click</button>
         </div>
+        {showMap ? <MapView/> : <ListView/>}
     </>
     
   );
