@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import "../styles/report.css"
 import '../styles/report.css';
 const AddressAutocomplete = ({ onSelect }) => {
   const inputRef = useRef(null);

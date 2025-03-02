@@ -3,8 +3,8 @@ import AddressAutocomplete from "./AddressAutoComplete";
 import "../styles/report.css";
 import React, { useState } from "react";
 import * as crimeService from "../Services/CrimeService"
+const API_KEY = import.meta.env.VITE_GEM_KEY;
 
-const API_KEY = "KEY_HERE";
 const genAI = new GoogleGenerativeAI(API_KEY);
 
 async function analyzeCrime(crimeDescription) {
