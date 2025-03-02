@@ -1,0 +1,19 @@
+.reportDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.locationRow{
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+}
+
+.reportInput{
+    flex: 1; 
+    padding: 10px;
+    font-size: 16px; 
+    min-width: 0;  
+    width: 100%; 
+    box-sizing: border-box; 
+}
