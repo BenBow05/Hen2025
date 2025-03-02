@@ -3,6 +3,7 @@ import './styles/NavBar.css';
 import './index.css';
 import React, { useState } from 'react';
 import AnalyzeCrime from './Components/CrimeSeverityRating';
+import ReportCrime from './Components/ReportCrime';
 import Dashboard from './Components/Dashboard';
 import Navbar from './Components/Navbar';
 import { Route, Routes } from 'react-router-dom';
@@ -18,7 +19,7 @@ function App() {
         <div>
           <Routes>
             <Route path='/' element={<Dashboard />} />
-            <Route path='/Report' element={<AnalyzeCrime />} />
+            <Route path='/Report' element={<ReportCrime />} />
           </Routes>
         </div>
 

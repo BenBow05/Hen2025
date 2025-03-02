@@ -1,6 +1,6 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import AddressAutocomplete from "./AddressAutoComplete";
-import "../css/report.css";
+import "../styles/report.css";
 import React, { useState } from "react";
 import * as crimeService from "../Services/CrimeService"
 
